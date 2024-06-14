@@ -1,0 +1,111 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('./assts/bg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.743); /* Black overlay with 50% opacity */
+    z-index: 0; /* Ensure the overlay is behind the content */
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1;
+}
+header img{
+    width: 3rem;
+    height: 3rem;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    z-index: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    color: #f1f1f1;
+    font-size: 1.2rem;
+}
+
+form label, form input, form button {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+input, button {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    header, footer {
+        padding: 0.5rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    form {
+        padding: 1rem;
+    }
+}
